@@ -35,3 +35,8 @@ pub struct OCamlInt64 {}
 
 /// `OCaml<OCamlFloat>` is a reference to an OCaml `float` (boxed `float`) value.
 pub struct OCamlFloat {}
+
+/// `OCaml<OCamlAbstract>` is a reference to an OCaml value that's opaque to us.
+/// Doesn't implement the FromOCaml/ToOCaml/ToRust traits, and no allocator
+/// function is provided.
+pub struct OCamlAbstract {}
